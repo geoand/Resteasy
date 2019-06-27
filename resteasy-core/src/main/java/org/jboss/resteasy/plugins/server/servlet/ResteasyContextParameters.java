@@ -81,6 +81,7 @@ public interface ResteasyContextParameters {
 
    // these scanned variables are provided by a deployer
    String RESTEASY_SCANNED_RESOURCES = "resteasy.scanned.resources";
+   String RESTEASY_SCANNED_RESOURCE_CLASSES_WITH_BUILDER = "resteasy.scanned.resource.classes.with.builder";
    String RESTEASY_SCANNED_PROVIDERS = "resteasy.scanned.providers";
    String RESTEASY_SCANNED_JNDI_RESOURCES = "resteasy.scanned.jndi.resources";
    String RESTEASY_CONTEXT_OBJECTS = "resteasy.context.objects";

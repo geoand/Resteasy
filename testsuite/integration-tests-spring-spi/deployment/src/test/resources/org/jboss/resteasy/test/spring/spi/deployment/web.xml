@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!-- This is similar to the way Quarkus configures RESTEasy -->
+
+    <!-- Needs to contain all the Spring Controllers that will be used -->
+    <context-param>
+        <param-name>resteasy.scanned.resource.classes.with.builder</param-name>
+        <param-value>org.jboss.resteasy.spi.metadata.SpringResourceBuilder:org.jboss.resteasy.test.spring.spi.deployment.resource.TestController</param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>Resteasy</filter-name>
+        <filter-class>org.jboss.resteasy.plugins.server.servlet.FilterDispatcher</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Resteasy</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+</web-app>
